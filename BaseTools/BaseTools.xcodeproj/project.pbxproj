@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3B24EC60211DA36300E0377B /* BaseTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC5E211DA36300E0377B /* BaseTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B24EC6E211DA44200E0377B /* CBaseTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC6D211DA44200E0377B /* CBaseTools.m */; };
-		3B24EC6F211DA44200E0377B /* CBaseTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B24EC6C211DA44200E0377B /* CBaseTools.h */; };
-		3B24EC77211DA5D700E0377B /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC76211DA5D600E0377B /* libstdc++.6.0.9.tbd */; };
 		3B24EC79211DA5E500E0377B /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC78211DA5E500E0377B /* libcurl.a */; };
 		3B24EC7A211DA5EF00E0377B /* libCBaseTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC6A211DA44100E0377B /* libCBaseTools.a */; };
+		3B24EC84211DA66F00E0377B /* DownloadTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC7F211DA66F00E0377B /* DownloadTask.cpp */; };
+		3B24EC85211DA66F00E0377B /* CXXThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC80211DA66F00E0377B /* CXXThreadPool.cpp */; };
+		3B24EC86211DA66F00E0377B /* CurlTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC81211DA66F00E0377B /* CurlTask.cpp */; };
+		3B24EC87211DA66F00E0377B /* CXXThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC83211DA66F00E0377B /* CXXThread.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				3B24EC6F211DA44200E0377B /* CBaseTools.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,10 +43,16 @@
 		3B24EC5E211DA36300E0377B /* BaseTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTools.h; sourceTree = "<group>"; };
 		3B24EC5F211DA36300E0377B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B24EC6A211DA44100E0377B /* libCBaseTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCBaseTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B24EC6C211DA44200E0377B /* CBaseTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBaseTools.h; sourceTree = "<group>"; };
-		3B24EC6D211DA44200E0377B /* CBaseTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBaseTools.m; sourceTree = "<group>"; };
 		3B24EC76211DA5D600E0377B /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3B24EC78211DA5E500E0377B /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = libcurl/lib/libcurl.a; sourceTree = "<group>"; };
+		3B24EC7C211DA66F00E0377B /* CXXThread.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CXXThread.hpp; sourceTree = "<group>"; };
+		3B24EC7D211DA66F00E0377B /* CurlTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CurlTask.hpp; sourceTree = "<group>"; };
+		3B24EC7E211DA66F00E0377B /* DownloadTask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DownloadTask.hpp; sourceTree = "<group>"; };
+		3B24EC7F211DA66F00E0377B /* DownloadTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DownloadTask.cpp; sourceTree = "<group>"; };
+		3B24EC80211DA66F00E0377B /* CXXThreadPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXXThreadPool.cpp; sourceTree = "<group>"; };
+		3B24EC81211DA66F00E0377B /* CurlTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurlTask.cpp; sourceTree = "<group>"; };
+		3B24EC82211DA66F00E0377B /* CXXThreadPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CXXThreadPool.hpp; sourceTree = "<group>"; };
+		3B24EC83211DA66F00E0377B /* CXXThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXXThread.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B24EC79211DA5E500E0377B /* libcurl.a in Frameworks */,
-				3B24EC77211DA5D700E0377B /* libstdc++.6.0.9.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +106,7 @@
 		3B24EC6B211DA44200E0377B /* CBaseTools */ = {
 			isa = PBXGroup;
 			children = (
-				3B24EC6C211DA44200E0377B /* CBaseTools.h */,
-				3B24EC6D211DA44200E0377B /* CBaseTools.m */,
+				3B24EC7B211DA63900E0377B /* Pthread+Curl_CSdk */,
 			);
 			path = CBaseTools;
 			sourceTree = "<group>";
@@ -114,6 +118,21 @@
 				3B24EC76211DA5D600E0377B /* libstdc++.6.0.9.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B24EC7B211DA63900E0377B /* Pthread+Curl_CSdk */ = {
+			isa = PBXGroup;
+			children = (
+				3B24EC81211DA66F00E0377B /* CurlTask.cpp */,
+				3B24EC7D211DA66F00E0377B /* CurlTask.hpp */,
+				3B24EC83211DA66F00E0377B /* CXXThread.cpp */,
+				3B24EC7C211DA66F00E0377B /* CXXThread.hpp */,
+				3B24EC80211DA66F00E0377B /* CXXThreadPool.cpp */,
+				3B24EC82211DA66F00E0377B /* CXXThreadPool.hpp */,
+				3B24EC7F211DA66F00E0377B /* DownloadTask.cpp */,
+				3B24EC7E211DA66F00E0377B /* DownloadTask.hpp */,
+			);
+			path = "Pthread+Curl_CSdk";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B24EC6E211DA44200E0377B /* CBaseTools.m in Sources */,
+				3B24EC84211DA66F00E0377B /* DownloadTask.cpp in Sources */,
+				3B24EC87211DA66F00E0377B /* CXXThread.cpp in Sources */,
+				3B24EC86211DA66F00E0377B /* CurlTask.cpp in Sources */,
+				3B24EC85211DA66F00E0377B /* CXXThreadPool.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +431,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJ5QVK7FZD;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include/curl";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/lib";
 				OTHER_LDFLAGS = "-ObjC";
@@ -424,7 +446,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJ5QVK7FZD;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include/curl";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/lib";
 				OTHER_LDFLAGS = "-ObjC";
