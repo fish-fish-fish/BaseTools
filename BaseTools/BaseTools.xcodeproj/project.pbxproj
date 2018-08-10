@@ -14,6 +14,12 @@
 		3B24EC85211DA66F00E0377B /* CXXThreadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC80211DA66F00E0377B /* CXXThreadPool.cpp */; };
 		3B24EC86211DA66F00E0377B /* CurlTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC81211DA66F00E0377B /* CurlTask.cpp */; };
 		3B24EC87211DA66F00E0377B /* CXXThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC83211DA66F00E0377B /* CXXThread.cpp */; };
+		3B24EC8F211DA7FF00E0377B /* LIDownloadTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC89211DA7FF00E0377B /* LIDownloadTask.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3B24EC90211DA7FF00E0377B /* LICurlTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8A211DA7FF00E0377B /* LICurlTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B24EC91211DA7FF00E0377B /* LICurlTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8B211DA7FF00E0377B /* LICurlTask.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */; };
+		3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,12 @@
 		3B24EC81211DA66F00E0377B /* CurlTask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurlTask.cpp; sourceTree = "<group>"; };
 		3B24EC82211DA66F00E0377B /* CXXThreadPool.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CXXThreadPool.hpp; sourceTree = "<group>"; };
 		3B24EC83211DA66F00E0377B /* CXXThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CXXThread.cpp; sourceTree = "<group>"; };
+		3B24EC89211DA7FF00E0377B /* LIDownloadTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LIDownloadTask.mm; sourceTree = "<group>"; };
+		3B24EC8A211DA7FF00E0377B /* LICurlTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LICurlTask.h; sourceTree = "<group>"; };
+		3B24EC8B211DA7FF00E0377B /* LICurlTask.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LICurlTask.mm; sourceTree = "<group>"; };
+		3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIBaseCurlTaskPtotocol.h; sourceTree = "<group>"; };
+		3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoRelease.mm; sourceTree = "<group>"; };
+		3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIDownloadTask.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		3B24EC5D211DA36300E0377B /* BaseTools */ = {
 			isa = PBXGroup;
 			children = (
+				3B24EC88211DA7BC00E0377B /* Pthread+Curl_OC */,
 				3B24EC5E211DA36300E0377B /* BaseTools.h */,
 				3B24EC5F211DA36300E0377B /* Info.plist */,
 			);
@@ -135,6 +148,19 @@
 			path = "Pthread+Curl_CSdk";
 			sourceTree = "<group>";
 		};
+		3B24EC88211DA7BC00E0377B /* Pthread+Curl_OC */ = {
+			isa = PBXGroup;
+			children = (
+				3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */,
+				3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */,
+				3B24EC8A211DA7FF00E0377B /* LICurlTask.h */,
+				3B24EC8B211DA7FF00E0377B /* LICurlTask.mm */,
+				3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */,
+				3B24EC89211DA7FF00E0377B /* LIDownloadTask.mm */,
+			);
+			path = "Pthread+Curl_OC";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -142,6 +168,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B24EC90211DA7FF00E0377B /* LICurlTask.h in Headers */,
+				3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */,
+				3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */,
 				3B24EC60211DA36300E0377B /* BaseTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */,
+				3B24EC8F211DA7FF00E0377B /* LIDownloadTask.mm in Sources */,
+				3B24EC91211DA7FF00E0377B /* LICurlTask.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +418,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/libcurl/include/curl",
+					"$(PROJECT_DIR)/CBaseTools/Pthread+Curl_CSdk",
+				);
 				INFOPLIST_FILE = BaseTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -411,6 +447,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/libcurl/include/curl",
+					"$(PROJECT_DIR)/CBaseTools/Pthread+Curl_CSdk",
+				);
 				INFOPLIST_FILE = BaseTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char BaseToolsVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BaseTools/PublicHeader.h>
 
+#import <BaseTools/LICurlTask.h>
+#import <BaseTools/LIDownloadTask.h>
+#import <BaseTools/LIBaseCurlTaskPtotocol.h>
 
