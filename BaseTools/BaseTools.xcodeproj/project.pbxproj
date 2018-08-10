@@ -8,16 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		3B24EC60211DA36300E0377B /* BaseTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC5E211DA36300E0377B /* BaseTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B24EC6E211DA44200E0377B /* CBaseTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC6D211DA44200E0377B /* CBaseTools.m */; };
+		3B24EC6F211DA44200E0377B /* CBaseTools.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3B24EC6C211DA44200E0377B /* CBaseTools.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B24EC73211DA45800E0377B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B24EC52211DA36200E0377B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B24EC69211DA44100E0377B;
+			remoteInfo = CBaseTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B24EC68211DA44100E0377B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3B24EC6F211DA44200E0377B /* CBaseTools.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B24EC5B211DA36300E0377B /* BaseTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B24EC5E211DA36300E0377B /* BaseTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTools.h; sourceTree = "<group>"; };
 		3B24EC5F211DA36300E0377B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B24EC6A211DA44100E0377B /* libCBaseTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCBaseTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B24EC6C211DA44200E0377B /* CBaseTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBaseTools.h; sourceTree = "<group>"; };
+		3B24EC6D211DA44200E0377B /* CBaseTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBaseTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3B24EC57211DA36300E0377B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B24EC67211DA44100E0377B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,6 +65,7 @@
 		3B24EC51211DA36200E0377B = {
 			isa = PBXGroup;
 			children = (
+				3B24EC6B211DA44200E0377B /* CBaseTools */,
 				3B24EC5D211DA36300E0377B /* BaseTools */,
 				3B24EC5C211DA36300E0377B /* Products */,
 			);
@@ -39,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3B24EC5B211DA36300E0377B /* BaseTools.framework */,
+				3B24EC6A211DA44100E0377B /* libCBaseTools.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -50,6 +87,15 @@
 				3B24EC5F211DA36300E0377B /* Info.plist */,
 			);
 			path = BaseTools;
+			sourceTree = "<group>";
+		};
+		3B24EC6B211DA44200E0377B /* CBaseTools */ = {
+			isa = PBXGroup;
+			children = (
+				3B24EC6C211DA44200E0377B /* CBaseTools.h */,
+				3B24EC6D211DA44200E0377B /* CBaseTools.m */,
+			);
+			path = CBaseTools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,11 +124,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B24EC74211DA45800E0377B /* PBXTargetDependency */,
 			);
 			name = BaseTools;
 			productName = BaseTools;
 			productReference = 3B24EC5B211DA36300E0377B /* BaseTools.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		3B24EC69211DA44100E0377B /* CBaseTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B24EC70211DA44200E0377B /* Build configuration list for PBXNativeTarget "CBaseTools" */;
+			buildPhases = (
+				3B24EC66211DA44100E0377B /* Sources */,
+				3B24EC67211DA44100E0377B /* Frameworks */,
+				3B24EC68211DA44100E0377B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CBaseTools;
+			productName = CBaseTools;
+			productReference = 3B24EC6A211DA44100E0377B /* libCBaseTools.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +158,9 @@
 				ORGANIZATIONNAME = liguanjun;
 				TargetAttributes = {
 					3B24EC5A211DA36300E0377B = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					3B24EC69211DA44100E0377B = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -110,6 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				3B24EC69211DA44100E0377B /* CBaseTools */,
 				3B24EC5A211DA36300E0377B /* BaseTools */,
 			);
 		};
@@ -133,7 +201,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3B24EC66211DA44100E0377B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B24EC6E211DA44200E0377B /* CBaseTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B24EC74211DA45800E0377B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B24EC69211DA44100E0377B /* CBaseTools */;
+			targetProxy = 3B24EC73211DA45800E0377B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3B24EC61211DA36300E0377B /* Debug */ = {
@@ -188,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -243,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -269,6 +353,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liguanjun.BaseTools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -293,8 +378,35 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liguanjun.BaseTools;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B24EC71211DA44200E0377B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B24EC72211DA44200E0377B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +429,15 @@
 			buildConfigurations = (
 				3B24EC64211DA36300E0377B /* Debug */,
 				3B24EC65211DA36300E0377B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B24EC70211DA44200E0377B /* Build configuration list for PBXNativeTarget "CBaseTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B24EC71211DA44200E0377B /* Debug */,
+				3B24EC72211DA44200E0377B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
