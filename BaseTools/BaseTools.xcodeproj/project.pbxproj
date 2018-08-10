@@ -18,7 +18,7 @@
 		3B24EC90211DA7FF00E0377B /* LICurlTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8A211DA7FF00E0377B /* LICurlTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B24EC91211DA7FF00E0377B /* LICurlTask.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8B211DA7FF00E0377B /* LICurlTask.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */; };
+		3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
