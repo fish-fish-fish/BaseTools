@@ -66,7 +66,7 @@ public:
 
 
 @interface LICurlTask ()
-@property(nonatomic, retain) NSString *url;
+@property(nonatomic, copy) NSString *url;
 
 @property(nonatomic, assign) NSUInteger startPosition;
 

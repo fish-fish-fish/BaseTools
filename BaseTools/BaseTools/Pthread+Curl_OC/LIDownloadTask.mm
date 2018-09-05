@@ -85,7 +85,7 @@ public:
 
 
 @interface LIDownloadTask ()
-@property(nonatomic, retain) NSString *url;
+@property(nonatomic, copy) NSString *url;
 
 @property(nonatomic, assign) NSUInteger startPosition;
 

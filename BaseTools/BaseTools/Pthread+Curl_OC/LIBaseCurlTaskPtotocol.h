@@ -15,13 +15,13 @@
  */
 @protocol LIBaseCurlTaskPtotocol <NSObject>
 
-@property(nonatomic, retain, readonly) NSString *url;
+@property(nonatomic, readonly) NSString *url;
 
-@property(nonatomic, assign, readonly) NSUInteger startPosition;
+@property(nonatomic, readonly) NSUInteger startPosition;
 
 @property(nonatomic, weak) id <LIBaseCurlTaskDelegate> delegate;
 
-@property(nonatomic, assign, readonly) BOOL isPaused;
+@property(nonatomic, readonly) BOOL isPaused;
 
 +(instancetype)taskWithUrl:(NSString *)url;
 +(instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition;
