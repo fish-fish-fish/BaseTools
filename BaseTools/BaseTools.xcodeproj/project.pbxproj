@@ -13,6 +13,17 @@
 		3B2259F5214010E70023A4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B2259F4214010E70023A4D4 /* Assets.xcassets */; };
 		3B2259F8214010E70023A4D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B2259F6214010E70023A4D4 /* LaunchScreen.storyboard */; };
 		3B2259FB214010E70023A4D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2259FA214010E70023A4D4 /* main.m */; };
+		3B225A002140156C0023A4D4 /* UrlItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B2259FF2140156C0023A4D4 /* UrlItems.plist */; };
+		3B225A0C21402F220023A4D4 /* DSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B225A0521402F220023A4D4 /* DSManager.m */; };
+		3B225A0D21402F220023A4D4 /* DSCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B225A0921402F220023A4D4 /* DSCellModel.m */; };
+		3B225A10214035080023A4D4 /* DSDownloadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B225A0F214035080023A4D4 /* DSDownloadModel.m */; };
+		3B225A1621403A840023A4D4 /* DSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B225A1221403A840023A4D4 /* DSTableViewCell.m */; };
+		3B225A1721403A840023A4D4 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B225A1521403A840023A4D4 /* DSViewController.m */; };
+		3B225A1821403CE30023A4D4 /* BaseTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC5B211DA36300E0377B /* BaseTools.framework */; };
+		3B225A1A21403CEE0023A4D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B225A1921403CEE0023A4D4 /* Foundation.framework */; };
+		3B225A1C21403CF40023A4D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B225A1B21403CF40023A4D4 /* UIKit.framework */; };
+		3B225A22214040840023A4D4 /* libz.1.2.8.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B225A21214040840023A4D4 /* libz.1.2.8.tbd */; };
+		3B225A29214047180023A4D4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B225A28214047180023A4D4 /* libstdc++.tbd */; };
 		3B24EC60211DA36300E0377B /* BaseTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC5E211DA36300E0377B /* BaseTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B24EC79211DA5E500E0377B /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC78211DA5E500E0377B /* libcurl.a */; };
 		3B24EC7A211DA5EF00E0377B /* libCBaseTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B24EC6A211DA44100E0377B /* libCBaseTools.a */; };
@@ -29,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B225A1D21403D060023A4D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B24EC52211DA36200E0377B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B24EC5A211DA36300E0377B;
+			remoteInfo = BaseTools;
+		};
 		3B24EC73211DA45800E0377B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B24EC52211DA36200E0377B /* Project object */;
@@ -61,6 +79,23 @@
 		3B2259F7214010E70023A4D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B2259F9214010E70023A4D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B2259FA214010E70023A4D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B2259FF2140156C0023A4D4 /* UrlItems.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UrlItems.plist; sourceTree = "<group>"; };
+		3B225A0521402F220023A4D4 /* DSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSManager.m; sourceTree = "<group>"; };
+		3B225A0621402F220023A4D4 /* DSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSManager.h; sourceTree = "<group>"; };
+		3B225A0821402F220023A4D4 /* DSCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCellModel.h; sourceTree = "<group>"; };
+		3B225A0921402F220023A4D4 /* DSCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCellModel.m; sourceTree = "<group>"; };
+		3B225A0E214035080023A4D4 /* DSDownloadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDownloadModel.h; sourceTree = "<group>"; };
+		3B225A0F214035080023A4D4 /* DSDownloadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDownloadModel.m; sourceTree = "<group>"; };
+		3B225A1221403A840023A4D4 /* DSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTableViewCell.m; sourceTree = "<group>"; };
+		3B225A1321403A840023A4D4 /* DSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTableViewCell.h; sourceTree = "<group>"; };
+		3B225A1421403A840023A4D4 /* DSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
+		3B225A1521403A840023A4D4 /* DSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
+		3B225A1921403CEE0023A4D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3B225A1B21403CF40023A4D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3B225A21214040840023A4D4 /* libz.1.2.8.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.8.tbd; path = usr/lib/libz.1.2.8.tbd; sourceTree = SDKROOT; };
+		3B225A242140420D0023A4D4 /* libbz2.1.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.1.0.tbd; path = usr/lib/libbz2.1.0.tbd; sourceTree = SDKROOT; };
+		3B225A262140470F0023A4D4 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		3B225A28214047180023A4D4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		3B24EC5B211DA36300E0377B /* BaseTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B24EC5E211DA36300E0377B /* BaseTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTools.h; sourceTree = "<group>"; };
 		3B24EC5F211DA36300E0377B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B225A1A21403CEE0023A4D4 /* Foundation.framework in Frameworks */,
+				3B225A1C21403CF40023A4D4 /* UIKit.framework in Frameworks */,
+				3B225A1821403CE30023A4D4 /* BaseTools.framework in Frameworks */,
+				3B225A29214047180023A4D4 /* libstdc++.tbd in Frameworks */,
+				3B225A22214040840023A4D4 /* libz.1.2.8.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +157,9 @@
 				3B2259EC214010E60023A4D4 /* AppDelegate.m */,
 				3B2259EE214010E60023A4D4 /* ViewController.h */,
 				3B2259EF214010E60023A4D4 /* ViewController.m */,
+				3B225A0121402EFC0023A4D4 /* Models */,
+				3B225A1121403A3B0023A4D4 /* Views */,
+				3B2259FF2140156C0023A4D4 /* UrlItems.plist */,
 				3B2259F1214010E60023A4D4 /* Main.storyboard */,
 				3B2259F4214010E70023A4D4 /* Assets.xcassets */,
 				3B2259F6214010E70023A4D4 /* LaunchScreen.storyboard */,
@@ -124,6 +167,30 @@
 				3B2259FA214010E70023A4D4 /* main.m */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		3B225A0121402EFC0023A4D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B225A0821402F220023A4D4 /* DSCellModel.h */,
+				3B225A0921402F220023A4D4 /* DSCellModel.m */,
+				3B225A0E214035080023A4D4 /* DSDownloadModel.h */,
+				3B225A0F214035080023A4D4 /* DSDownloadModel.m */,
+				3B225A0621402F220023A4D4 /* DSManager.h */,
+				3B225A0521402F220023A4D4 /* DSManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B225A1121403A3B0023A4D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B225A1321403A840023A4D4 /* DSTableViewCell.h */,
+				3B225A1221403A840023A4D4 /* DSTableViewCell.m */,
+				3B225A1421403A840023A4D4 /* DSViewController.h */,
+				3B225A1521403A840023A4D4 /* DSViewController.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3B24EC51211DA36200E0377B = {
@@ -168,6 +235,12 @@
 		3B24EC75211DA5D600E0377B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B225A28214047180023A4D4 /* libstdc++.tbd */,
+				3B225A262140470F0023A4D4 /* libstdc++.6.tbd */,
+				3B225A242140420D0023A4D4 /* libbz2.1.0.tbd */,
+				3B225A21214040840023A4D4 /* libz.1.2.8.tbd */,
+				3B225A1B21403CF40023A4D4 /* UIKit.framework */,
+				3B225A1921403CEE0023A4D4 /* Foundation.framework */,
 				3B24EC78211DA5E500E0377B /* libcurl.a */,
 				3B24EC76211DA5D600E0377B /* libstdc++.6.0.9.tbd */,
 			);
@@ -230,6 +303,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B225A1E21403D060023A4D4 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -319,6 +393,7 @@
 			files = (
 				3B2259F8214010E70023A4D4 /* LaunchScreen.storyboard in Resources */,
 				3B2259F5214010E70023A4D4 /* Assets.xcassets in Resources */,
+				3B225A002140156C0023A4D4 /* UrlItems.plist in Resources */,
 				3B2259F3214010E60023A4D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,9 +412,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B225A10214035080023A4D4 /* DSDownloadModel.m in Sources */,
+				3B225A1621403A840023A4D4 /* DSTableViewCell.m in Sources */,
+				3B225A0C21402F220023A4D4 /* DSManager.m in Sources */,
+				3B225A1721403A840023A4D4 /* DSViewController.m in Sources */,
 				3B2259F0214010E60023A4D4 /* ViewController.m in Sources */,
 				3B2259FB214010E70023A4D4 /* main.m in Sources */,
 				3B2259ED214010E60023A4D4 /* AppDelegate.m in Sources */,
+				3B225A0D21402F220023A4D4 /* DSCellModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +447,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B225A1E21403D060023A4D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B24EC5A211DA36300E0377B /* BaseTools */;
+			targetProxy = 3B225A1D21403D060023A4D4 /* PBXContainerItemProxy */;
+		};
 		3B24EC74211DA45800E0377B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3B24EC69211DA44100E0377B /* CBaseTools */;
@@ -406,6 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liguanjun.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -424,6 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liguanjun.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,7 +699,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include/curl";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/lib";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -627,7 +714,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/include/curl";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/libcurl/lib";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

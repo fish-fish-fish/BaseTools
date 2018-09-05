@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>curl-7.61.0.tar.gz</string>
+		<key>url</key>
+		<string>https://curl.haxx.se/download/curl-7.61.0.tar.gz</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>QQ_V6.5.0.dmg</string>
+		<key>url</key>
+		<string>https://dldir1.qq.com/qqfile/QQforMac/QQ_V6.5.0.dmg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NeteaseMusic.dmg</string>
+		<key>url</key>
+		<string>https://d1.music.126.net/dmusic/NeteaseMusic_1.5.9_622_officialsite.dmg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>iQIYIMedia_005.dmg</string>
+		<key>url</key>
+		<string>http://110.157.231.232/cdn/pcclient/20180830/19/02/iQIYIMedia_005.dmg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>youkumac_1.5.7.08311.dmg</string>
+		<key>url</key>
+		<string>https://pcclient.download.youku.com/ikumac/youkumac_1.5.7.08311.dmg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>TencentVideo_V1.9.1.38555.dmg</string>
+		<key>url</key>
+		<string>http://dldir1.qq.com/qqtv/mac/TencentVideo_V1.9.1.38555.dmg</string>
+	</dict>
+</array>
+</plist>
