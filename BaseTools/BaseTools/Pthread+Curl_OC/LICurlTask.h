@@ -10,5 +10,5 @@
 #import "LIBaseCurlTaskPtotocol.h"
 
 @interface LICurlTask : NSObject <LIBaseCurlTaskPtotocol>
-
+- (instancetype)init NS_UNAVAILABLE;
 @end

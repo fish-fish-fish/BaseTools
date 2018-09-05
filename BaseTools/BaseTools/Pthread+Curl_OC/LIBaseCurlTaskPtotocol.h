@@ -23,19 +23,19 @@
 
 @property(nonatomic, readonly) BOOL isPaused;
 
-+(instancetype)taskWithUrl:(NSString *)url;
-+(instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition;
++ (instancetype)taskWithUrl:(NSString *)url;
++ (instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition;
 
--(instancetype)initWithUrl:(NSString *)url;
--(instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition;
+- (instancetype)initWithUrl:(NSString *)url;
+- (instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition;
 
--(void)start;
+- (void)start;
 
--(void)resum;
+- (void)resum;
 
--(void)pause;
+- (void)pause;
 
--(void)cancel;
+- (void)cancel;
 
 @end
 
@@ -44,18 +44,18 @@
  */
 @protocol LIBaseCurlTaskDelegate <NSObject>
 @required
--(void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedData:(char *)buffer size:(NSUInteger)size;
+- (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedData:(char *)buffer size:(NSUInteger)size;
 
 @optional
--(void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedResponse:(NSString *)response;
+- (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedResponse:(NSString *)response;
 
--(void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task updateProgress:(NSUInteger)dlnow total:(NSUInteger)dltotal;
+- (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task updateProgress:(NSUInteger)dlnow total:(NSUInteger)dltotal;
 
--(void)downloadTaskComleted:(id <LIBaseCurlTaskPtotocol>)task;
+- (void)downloadTaskComleted:(id <LIBaseCurlTaskPtotocol>)task;
 
--(void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task failed:(NSInteger)code;
+- (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task failed:(NSInteger)code;
 
--(void)downloadTaskDidResumed:(id <LIBaseCurlTaskPtotocol>)task;
+- (void)downloadTaskDidResumed:(id <LIBaseCurlTaskPtotocol>)task;
 
--(void)downloadTaskDidPaused:(id <LIBaseCurlTaskPtotocol>)task;
+- (void)downloadTaskDidPaused:(id <LIBaseCurlTaskPtotocol>)task;
 @end

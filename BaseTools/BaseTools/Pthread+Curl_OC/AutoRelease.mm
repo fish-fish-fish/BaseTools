@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-class AutoRelease {
+class AutoRelease{
 public:
     AutoRelease(NSObject *obj) {
         m_obj = [obj retain];

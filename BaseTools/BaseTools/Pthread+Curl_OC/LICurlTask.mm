@@ -80,23 +80,20 @@ public:
     std::shared_ptr<CurlTask> _task;
     std::shared_ptr<_CurlTaskDelegate> _taskDelegate;
 }
-- (instancetype)init
-{
+
+- (instancetype)init {
     return nil;
 }
 
-+(instancetype)taskWithUrl:(NSString *)url
-{
++ (instancetype)taskWithUrl:(NSString *)url {
     return [[[LICurlTask alloc] initWithUrl:url] autorelease];
 }
 
-+(instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition
-{
++ (instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition {
     return [[[LICurlTask alloc] initWithUrl:url rangeFrom:startPosition] autorelease];
 }
 
--(instancetype)initWithUrl:(NSString *)url
-{
+- (instancetype)initWithUrl:(NSString *)url {
     if (self = [super init]) {
         _url = [url copy];
         _startPosition = 0;
@@ -106,8 +103,7 @@ public:
     return self;
 }
 
--(instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition
-{
+- (instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition {
     if (self = [super init]) {
         _url = [url copy];
         _startPosition = startPosition;
@@ -117,16 +113,14 @@ public:
     return self;
 }
 
--(void)dealloc
-{
+- (void)dealloc {
     [_url release];
     _url = nil;
     
     [super dealloc];
 }
 
--(std::shared_ptr<CurlTask>&)task
-{
+- (std::shared_ptr<CurlTask>&)task {
     if (_task.get() == nullptr) {
         _task =  unique_ptr<CurlTask>(new CurlTask(std::string([self.url cStringUsingEncoding:NSUTF8StringEncoding]), self.startPosition));
         std::shared_ptr<CurlTaskDelegate> delegate = std::static_pointer_cast<CurlTaskDelegate>([self taskDelegate]);
@@ -135,15 +129,14 @@ public:
     return _task;
 }
 
--(std::shared_ptr<_CurlTaskDelegate>&)taskDelegate
-{
+- (std::shared_ptr<_CurlTaskDelegate>&)taskDelegate {
     if (_taskDelegate.get() == nullptr) {
         _taskDelegate =  shared_ptr<_CurlTaskDelegate>(new _CurlTaskDelegate(self));
     }
     return _taskDelegate;
 }
 
--(void)setDelegate:(id<LIBaseCurlTaskDelegate>)delegate {
+- (void)setDelegate:(id<LIBaseCurlTaskDelegate>)delegate {
     self.curlTaskDelegate = delegate;
 }
 
@@ -151,30 +144,25 @@ public:
     return self.curlTaskDelegate;
 }
 
--(BOOL)isPaused
-{
+- (BOOL)isPaused {
     return self.task->isPaused();
 }
 
--(void)start
-{
+- (void)start {
     shared_ptr<CurlTask>& curlTask = [self task];
     shared_ptr<Task> task = std::static_pointer_cast<Task>(curlTask);
     ThreadPool::sharedInstance().push(task);
 }
 
--(void)resum
-{
+- (void)resum {
     self.task->resum();
 }
 
--(void)pause
-{
+- (void)pause {
     self.task->pause();
 }
 
--(void)cancel
-{
+- (void)cancel {
     self.task->cancel();
 }
 

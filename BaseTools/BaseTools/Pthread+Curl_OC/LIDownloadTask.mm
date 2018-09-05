@@ -98,23 +98,20 @@ public:
 {
     std::unique_ptr<DownloadTaskDelegate> _taskDelegate;
 }
-- (instancetype)init
-{
+
+- (instancetype)init {
     return nil;
 }
 
-+(instancetype)taskWithUrl:(NSString *)url
-{
++ (instancetype)taskWithUrl:(NSString *)url {
     return [[[LIDownloadTask alloc] initWithUrl:url] autorelease];
 }
 
-+(instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition
-{
++ (instancetype)taskWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition {
     return [[[LIDownloadTask alloc] initWithUrl:url rangeFrom:startPosition] autorelease];
 }
 
--(instancetype)initWithUrl:(NSString *)url
-{
+- (instancetype)initWithUrl:(NSString *)url {
     if (self = [super init]) {
         _url = [url copy];
         _startPosition = 0;
@@ -123,8 +120,7 @@ public:
     return self;
 }
 
--(instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition
-{
+- (instancetype)initWithUrl:(NSString *)url rangeFrom:(NSUInteger)startPosition {
     if (self = [super init]) {
         _url = [url copy];
         _startPosition = startPosition;
@@ -133,23 +129,21 @@ public:
     return self;
 }
 
--(void)dealloc
-{
+- (void)dealloc {
     [_url release];
     _url = nil;
     
     [super dealloc];
 }
 
--(std::unique_ptr<DownloadTaskDelegate>&)taskDelegate
-{
+- (std::unique_ptr<DownloadTaskDelegate>&)taskDelegate {
     if (_taskDelegate.get() == nullptr) {
         _taskDelegate =  unique_ptr<DownloadTaskDelegate>(new DownloadTaskDelegate((Handle)self,string([self.url cStringUsingEncoding:NSUTF8StringEncoding])));
     }
     return _taskDelegate;
 }
 
--(void)setDelegate:(id<LIBaseCurlTaskDelegate>)delegate {
+- (void)setDelegate:(id<LIBaseCurlTaskDelegate>)delegate {
     self.curlTaskDelegate = delegate;
 }
 
@@ -157,28 +151,23 @@ public:
     return self.curlTaskDelegate;
 }
 
--(BOOL)isPaused
-{
+- (BOOL)isPaused {
     return self.taskDelegate->isPaused();
 }
 
--(void)start
-{
+- (void)start {
     self.taskDelegate->start();
 }
 
--(void)resum
-{
+- (void)resum {
     self.taskDelegate->resum();
 }
 
--(void)pause
-{
+- (void)pause {
     self.taskDelegate->pause();
 }
 
--(void)cancel
-{
+- (void)cancel {
     self.taskDelegate->cancel();
 }
 
