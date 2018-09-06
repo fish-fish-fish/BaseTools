@@ -20,7 +20,6 @@ namespace CXXThread {
     
     void ThreadPool::init() {
         pInstance = new ThreadPool();
-        pInstance->start(5);
     }
     
     ThreadPool::ThreadPool(): m_threads(), m_taskQueue(), m_mutex(), m_condition(m_mutex) {

@@ -23,13 +23,13 @@ namespace CXXThread {
     class ThreadPool: NonCopyableProtocol {
     public:
         static ThreadPool& sharedInstance();
+        void start(int numThreads);
         void push(std::shared_ptr<Task>& task);
         
     private:
         friend class TaskThread;
         static void init();
         ThreadPool();
-        void start(int numThreads);
         std::shared_ptr<Task> pop();
         
         std::vector< std::unique_ptr<TaskThread> > m_threads;
