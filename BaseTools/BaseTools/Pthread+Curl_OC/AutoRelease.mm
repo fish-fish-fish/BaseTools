@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-class AutoRelease{
+// 利用栈上对象自动释放特性，正确释放OC对象
+class AutoRelease {
 public:
     AutoRelease(NSObject *obj) {
         m_obj = [obj retain];

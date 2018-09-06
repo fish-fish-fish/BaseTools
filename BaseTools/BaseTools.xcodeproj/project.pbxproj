@@ -37,6 +37,8 @@
 		3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE935422140BD3800E8743C /* LIThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE935402140BD3800E8743C /* LIThreadPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE935432140BD3800E8743C /* LIThreadPool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BE935412140BD3800E8743C /* LIThreadPool.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,9 @@
 		3B24EC8C211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIBaseCurlTaskPtotocol.h; sourceTree = "<group>"; };
 		3B24EC8D211DA7FF00E0377B /* AutoRelease.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AutoRelease.mm; sourceTree = "<group>"; };
 		3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIDownloadTask.h; sourceTree = "<group>"; };
+		3BE935402140BD3800E8743C /* LIThreadPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIThreadPool.h; sourceTree = "<group>"; };
+		3BE935412140BD3800E8743C /* LIThreadPool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LIThreadPool.mm; sourceTree = "<group>"; };
+		3BE935462140D2CC00E8743C /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +170,7 @@
 				3B2259F6214010E70023A4D4 /* LaunchScreen.storyboard */,
 				3B2259F9214010E70023A4D4 /* Info.plist */,
 				3B2259FA214010E70023A4D4 /* main.m */,
+				3BE935462140D2CC00E8743C /* Demo-Prefix.pch */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 				3B24EC8B211DA7FF00E0377B /* LICurlTask.mm */,
 				3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */,
 				3B24EC89211DA7FF00E0377B /* LIDownloadTask.mm */,
+				3BE935402140BD3800E8743C /* LIThreadPool.h */,
+				3BE935412140BD3800E8743C /* LIThreadPool.mm */,
 			);
 			path = "Pthread+Curl_OC";
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE935422140BD3800E8743C /* LIThreadPool.h in Headers */,
 				3B24EC90211DA7FF00E0377B /* LICurlTask.h in Headers */,
 				3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */,
 				3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */,
@@ -427,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE935432140BD3800E8743C /* LIThreadPool.mm in Sources */,
 				3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */,
 				3B24EC8F211DA7FF00E0377B /* LIDownloadTask.mm in Sources */,
 				3B24EC91211DA7FF00E0377B /* LICurlTask.mm in Sources */,
@@ -485,8 +495,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,8 +515,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
