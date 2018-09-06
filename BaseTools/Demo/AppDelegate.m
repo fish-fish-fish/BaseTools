@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 线程池启动5个子线程
+    [LIThreadPool.shared startWithThreads:5];
     return YES;
 }
 

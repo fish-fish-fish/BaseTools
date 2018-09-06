@@ -9,6 +9,7 @@
 #import "DSViewController.h"
 #import "DSTableViewCell.h"
 #import "DSManager.h"
+
 @interface DSViewController ()<UITableViewDataSource, UITableViewDelegate, DSDownloadModelDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"下载测试";
     [[DSManager shared] loadModelsIfNeeded];
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
@@ -27,6 +29,14 @@
     self.tableView.rowHeight = [DSTableViewCell cellHeight];
     [self.view addSubview:self.tableView];
     
+    // test OC风格的 Block task 
+    [LIThreadPool.shared pushTask:^{
+        int index = 10;
+        while (index-- > 0) {
+            sleep(1);
+            NSLog(@"%s, index:%d", __func__, index);
+        }
+    }];
 }
 
 - (void)viewWillLayoutSubviews {
