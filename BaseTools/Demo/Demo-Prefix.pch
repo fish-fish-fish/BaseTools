@@ -11,6 +11,17 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <BaseTools/BaseTools.h>
+
+// 线程池线程数量
+#define ThreadsInPool 4
+
+// 下载模型选择：
+// 0: LIDownloadTask
+// 1: LICurlTask
+#define UsingCurlTask 1
 
 #endif /* Demo_Prefix_pch */

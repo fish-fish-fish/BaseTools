@@ -12,9 +12,6 @@
 #import "LIDownloadTask.h"
 #import "DSManager.h"
 
-#define UsingCurlTask 0
-
-static NSString *libraryPath = nil;
 @interface DSDownloadModel () <LIBaseCurlTaskDelegate>
 {
     time_t _lastTimeOfUpdate;
@@ -28,10 +25,6 @@ static NSString *libraryPath = nil;
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     if (self = [super initWithDict:dict]) {
-        if (libraryPath == nil) {
-            libraryPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask,YES).firstObject;
-            NSLog(@"libraryPath: %@", libraryPath);
-        }
         NSString *fullPath = [[DSManager shared].rootDir stringByAppendingPathComponent:self.name];
         if ([[NSFileManager defaultManager] fileExistsAtPath:fullPath]) {
             _absPath = fullPath;
