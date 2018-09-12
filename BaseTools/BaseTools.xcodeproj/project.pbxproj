@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3B392563214898900027C756 /* Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3B392566214898900027C756 /* Build configuration list for PBXAggregateTarget "Package" */;
+			buildPhases = (
+				3B392567214898CA0027C756 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Package;
+			productName = Package;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3B2259ED214010E60023A4D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2259EC214010E60023A4D4 /* AppDelegate.m */; };
 		3B2259F0214010E60023A4D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2259EF214010E60023A4D4 /* ViewController.m */; };
@@ -373,6 +387,9 @@
 					3B24EC69211DA44100E0377B = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					3B392563214898900027C756 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 				};
 			};
 			buildConfigurationList = 3B24EC55211DA36200E0377B /* Build configuration list for PBXProject "BaseTools" */;
@@ -391,6 +408,7 @@
 				3B24EC69211DA44100E0377B /* CBaseTools */,
 				3B24EC5A211DA36300E0377B /* BaseTools */,
 				3B2259E8214010E60023A4D4 /* Demo */,
+				3B392563214898900027C756 /* Package */,
 			);
 		};
 /* End PBXProject section */
@@ -415,6 +433,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B392567214898CA0027C756 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}\n/bin/sh ./package.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3B2259E5214010E60023A4D4 /* Sources */ = {
@@ -733,6 +767,24 @@
 			};
 			name = Release;
 		};
+		3B392564214898900027C756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B392565214898900027C756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BJ5QVK7FZD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +820,15 @@
 			buildConfigurations = (
 				3B24EC71211DA44200E0377B /* Debug */,
 				3B24EC72211DA44200E0377B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B392566214898900027C756 /* Build configuration list for PBXAggregateTarget "Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B392564214898900027C756 /* Debug */,
+				3B392565214898900027C756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
