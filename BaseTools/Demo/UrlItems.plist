@@ -22,9 +22,9 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>thunder_3.2.6.3728.dmg</string>
+		<string>QQMusicMac_Mgr.dmg</string>
 		<key>url</key>
-		<string>http://down.sandai.net/mac/thunder_3.2.6.3728.dmg</string>
+		<string>https://dldir1.qq.com/music/clntupate/mac/QQMusicMac_Mgr.dmg</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -37,6 +37,12 @@
 		<string>TencentVideo_V1.9.1.38555.dmg</string>
 		<key>url</key>
 		<string>http://dldir1.qq.com/qqtv/mac/TencentVideo_V1.9.1.38555.dmg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>BaiduNetdisk_mac_2.2.2.dmg</string>
+		<key>url</key>
+		<string>http://issuecdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_2.2.2.dmg</string>
 	</dict>
 </array>
 </plist>
