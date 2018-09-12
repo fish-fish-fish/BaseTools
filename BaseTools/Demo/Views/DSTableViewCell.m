@@ -103,6 +103,13 @@ const CGFloat Height = 36.0;
             self.removeButton.hidden = YES;
         }
             break;
+        case DSDownloadModelStatus_queueing:
+        {
+            [self.handleButton setTitle:@"排队中" forState:UIControlStateDisabled];
+            self.handleButton.enabled = NO;
+            self.removeButton.hidden = YES;
+        }
+            break;
         case DSDownloadModelStatus_paused:
         {
             [self.handleButton setTitle:@"继续下载" forState:UIControlStateNormal];

@@ -157,6 +157,9 @@ public:
 
 - (void)start {
     self.taskDelegate->start();
+    if ([self.delegate respondsToSelector:@selector(downloadTaskWillStart:)]) {
+        [self.delegate downloadTaskWillStart:self];
+    }
 }
 
 - (void)resum {

@@ -152,6 +152,9 @@ public:
     shared_ptr<CurlTask>& curlTask = [self task];
     shared_ptr<Task> task = std::static_pointer_cast<Task>(curlTask);
     ThreadPool::sharedInstance().push(task);
+    if ([self.delegate respondsToSelector:@selector(downloadTaskWillStart:)]) {
+        [self.delegate downloadTaskWillStart:self];
+    }
 }
 
 - (void)resum {

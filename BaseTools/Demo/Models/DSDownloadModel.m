@@ -144,6 +144,12 @@
     [self.tempFile writeData:[[NSData alloc] initWithBytesNoCopy:(void *)buffer length:size freeWhenDone:NO]];
 }
 
+- (void)downloadTaskWillStart:(id<LIBaseCurlTaskPtotocol>)task {
+    _status = DSDownloadModelStatus_queueing;
+    _progressInfo = @"排队中...";
+    [self updateCell];
+}
+
 - (void)downloadTask:(id<LIBaseCurlTaskPtotocol>)task recivedResponse:(NSString *)response {
     NSLog(@"%@",response);
 }

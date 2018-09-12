@@ -47,6 +47,8 @@
 - (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedData:(char *)buffer size:(NSUInteger)size;
 
 @optional
+- (void)downloadTaskWillStart:(id <LIBaseCurlTaskPtotocol>)task;
+
 - (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task recivedResponse:(NSString *)response;
 
 - (void)downloadTask:(id <LIBaseCurlTaskPtotocol>)task updateProgress:(NSUInteger)dlnow total:(NSUInteger)dltotal;
