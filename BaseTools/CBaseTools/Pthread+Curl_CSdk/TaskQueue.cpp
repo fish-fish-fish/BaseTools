@@ -34,7 +34,7 @@ namespace CXXThread {
         return s_globalQueue;
     }
     
-    TaskQueue::TaskQueue(int maxConcurrentCount): m_maxConcurrentCount(maxConcurrentCount), m_currentQueueIndex(0) {
+    TaskQueue::TaskQueue(int maxConcurrentCount): m_maxConcurrentCount(maxConcurrentCount), m_runningTaskCount(0), m_currentQueueIndex(0) {
         
     }
     
@@ -64,40 +64,31 @@ namespace CXXThread {
         MutexLockGuard guard(m_lock);
         if (runningTaskCount() >= m_maxConcurrentCount) {
             return nullptr;
-            
-        } else if(m_currentQueueIndex > 0 && m_currentQueueIndex <= m_subQueues.size()) {
-            int currentIndex = m_currentQueueIndex;
-            do {
-                if (m_currentQueueIndex == 0) {
-                    std::shared_ptr<QueueTask> task = popQueueTask();
-                    if (task != nullptr) {
-                        return task;
-                    }
-                } else {
-                    std::shared_ptr<QueueTask> task = m_subQueues[m_currentQueueIndex-1]->pop();
-                    if (task != nullptr) {
-                        return task;
-                    }
-                }
-                if (m_currentQueueIndex >= m_subQueues.size()) {
-                    m_currentQueueIndex = 0;
-                } else {
-                    m_currentQueueIndex++;
-                }
-            } while (currentIndex != m_currentQueueIndex);
-            return nullptr;
-            
-        } else {
-            m_currentQueueIndex = 0;
-            std::shared_ptr<QueueTask> task = popQueueTask();
-            if (task == nullptr) {
-                m_currentQueueIndex++;
-                return nullptr;
-            } else {
-                return task;
-            }
-            
         }
+        if(m_currentQueueIndex < 0 || m_currentQueueIndex > m_subQueues.size()) {
+            m_currentQueueIndex = 0;
+        }
+        
+        int currentIndex = m_currentQueueIndex;
+        do {
+            if (m_currentQueueIndex == 0) {
+                std::shared_ptr<QueueTask> task = popQueueTask();
+                if (task != nullptr) {
+                    return task;
+                }
+            } else {
+                std::shared_ptr<QueueTask> task = m_subQueues[m_currentQueueIndex-1]->pop();
+                if (task != nullptr) {
+                    return task;
+                }
+            }
+            if (m_currentQueueIndex >= m_subQueues.size()) {
+                m_currentQueueIndex = 0;
+            } else {
+                m_currentQueueIndex++;
+            }
+        } while (currentIndex != m_currentQueueIndex);
+        return nullptr;
     }
     
     std::shared_ptr<QueueTask> TaskQueue::popQueueTask() {
