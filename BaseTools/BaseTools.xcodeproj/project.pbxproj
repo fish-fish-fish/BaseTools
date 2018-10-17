@@ -53,6 +53,9 @@
 		3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B24EC8E211DA7FF00E0377B /* LIDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BE935422140BD3800E8743C /* LIThreadPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BE935402140BD3800E8743C /* LIThreadPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BE935432140BD3800E8743C /* LIThreadPool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3BE935412140BD3800E8743C /* LIThreadPool.mm */; };
+		ED004C242175B78200976C20 /* TaskQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED004C222175B78200976C20 /* TaskQueue.cpp */; };
+		EDAE05502176E181008B8766 /* LITaskQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = EDAE054E2176E181008B8766 /* LITaskQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDAE05512176E181008B8766 /* LITaskQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = EDAE054F2176E181008B8766 /* LITaskQueue.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +138,10 @@
 		3BE935402140BD3800E8743C /* LIThreadPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIThreadPool.h; sourceTree = "<group>"; };
 		3BE935412140BD3800E8743C /* LIThreadPool.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LIThreadPool.mm; sourceTree = "<group>"; };
 		3BE935462140D2CC00E8743C /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
+		ED004C222175B78200976C20 /* TaskQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TaskQueue.cpp; sourceTree = "<group>"; };
+		ED004C232175B78200976C20 /* TaskQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TaskQueue.hpp; sourceTree = "<group>"; };
+		EDAE054E2176E181008B8766 /* LITaskQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LITaskQueue.h; sourceTree = "<group>"; };
+		EDAE054F2176E181008B8766 /* LITaskQueue.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LITaskQueue.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +285,8 @@
 				3B24EC82211DA66F00E0377B /* CXXThreadPool.hpp */,
 				3B24EC7F211DA66F00E0377B /* DownloadTask.cpp */,
 				3B24EC7E211DA66F00E0377B /* DownloadTask.hpp */,
+				ED004C222175B78200976C20 /* TaskQueue.cpp */,
+				ED004C232175B78200976C20 /* TaskQueue.hpp */,
 			);
 			path = "Pthread+Curl_CSdk";
 			sourceTree = "<group>";
@@ -293,6 +302,8 @@
 				3B24EC89211DA7FF00E0377B /* LIDownloadTask.mm */,
 				3BE935402140BD3800E8743C /* LIThreadPool.h */,
 				3BE935412140BD3800E8743C /* LIThreadPool.mm */,
+				EDAE054E2176E181008B8766 /* LITaskQueue.h */,
+				EDAE054F2176E181008B8766 /* LITaskQueue.mm */,
 			);
 			path = "Pthread+Curl_OC";
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE935422140BD3800E8743C /* LIThreadPool.h in Headers */,
+				EDAE05502176E181008B8766 /* LITaskQueue.h in Headers */,
 				3B24EC90211DA7FF00E0377B /* LICurlTask.h in Headers */,
 				3B24EC92211DA7FF00E0377B /* LIBaseCurlTaskPtotocol.h in Headers */,
 				3B24EC94211DA7FF00E0377B /* LIDownloadTask.h in Headers */,
@@ -473,6 +485,7 @@
 				3BE935432140BD3800E8743C /* LIThreadPool.mm in Sources */,
 				3B24EC93211DA7FF00E0377B /* AutoRelease.mm in Sources */,
 				3B24EC8F211DA7FF00E0377B /* LIDownloadTask.mm in Sources */,
+				EDAE05512176E181008B8766 /* LITaskQueue.mm in Sources */,
 				3B24EC91211DA7FF00E0377B /* LICurlTask.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED004C242175B78200976C20 /* TaskQueue.cpp in Sources */,
 				3B24EC84211DA66F00E0377B /* DownloadTask.cpp in Sources */,
 				3B24EC87211DA66F00E0377B /* CXXThread.cpp in Sources */,
 				3B24EC86211DA66F00E0377B /* CurlTask.cpp in Sources */,

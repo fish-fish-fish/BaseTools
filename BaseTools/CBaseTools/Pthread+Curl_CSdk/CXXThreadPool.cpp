@@ -7,6 +7,7 @@
 //
 
 #include "CXXThreadPool.hpp"
+#include "TaskQueue.hpp"
 
 namespace CXXThread {
     
@@ -22,8 +23,9 @@ namespace CXXThread {
         pInstance = new ThreadPool();
     }
     
-    ThreadPool::ThreadPool(): m_threads(), m_taskQueue(), m_mutex(), m_condition(m_mutex) {
-        
+    
+    ThreadPool::ThreadPool(): m_threads(), m_mutex(), m_condition(m_mutex) {
+        m_taskQueue = std::make_shared<TaskQueue>(1);
     }
     
     void ThreadPool::start(int numThreads) {
@@ -34,29 +36,17 @@ namespace CXXThread {
         }
     }
     
-    void ThreadPool::push(std::shared_ptr<Task>& task){
-        MutexLockGuard guard(m_mutex);
-        m_taskQueue.push(task);
-        m_condition.notifyOnce();
-    }
-    
-    std::shared_ptr<Task> ThreadPool::pop(){
-        MutexLockGuard guard(m_mutex);
-        if (m_taskQueue.size() == 0) {
-            m_condition.wait();
-        }
-        std::shared_ptr<Task> task = std::move( m_taskQueue.front() );
-        m_taskQueue.pop();
-        return task;
-    }
-    
 #pragma mark - TaskThread
     void TaskThread::body() {
         while (1) {
-            ThreadPool& pool = ThreadPool::sharedInstance();
-            std::shared_ptr<Task> task = pool.pop();
-            assert(task);
-            task->operator()();
+            std::shared_ptr<QueueTask> task = TaskQueue::globalQueue()->pop();
+            if (task != nullptr) {
+                task->beforeRun();
+                task->operator()();
+                task->afterRun();
+            } else {
+                TaskQueue::globalQueue()->waitSignal();
+            }
         }
     }
     

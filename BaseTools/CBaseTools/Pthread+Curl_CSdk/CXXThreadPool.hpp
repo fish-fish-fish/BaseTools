@@ -19,21 +19,20 @@
 namespace CXXThread {
     class Task;
     class TaskThread;
+    class TaskQueue;
 #pragma mark - 线程池
     class ThreadPool: NonCopyableProtocol {
     public:
         static ThreadPool& sharedInstance();
         void start(int numThreads);
-        void push(std::shared_ptr<Task>& task);
         
     private:
         friend class TaskThread;
         static void init();
         ThreadPool();
-        std::shared_ptr<Task> pop();
         
         std::vector< std::unique_ptr<TaskThread> > m_threads;
-        std::queue< std::shared_ptr<Task> > m_taskQueue;
+        std::shared_ptr<TaskQueue> m_taskQueue;
         MutexLock m_mutex;
         Condition m_condition;
     };

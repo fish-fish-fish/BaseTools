@@ -8,30 +8,10 @@
 
 #import "LIThreadPool.h"
 #import "CXXThreadPool.hpp"
+#import "TaskQueue.hpp"
 
 using namespace CXXThread;
 using namespace std;
-
-class BlockTask: public Task {
-public:
-    BlockTask(OCBlock block) {
-        m_block = [block copy];
-    }
-    
-    ~BlockTask() {
-        m_block = nil;
-    }
-protected:
-    virtual void operator() () {
-        if (m_block) {
-            m_block();
-        }
-    }
-    
-private:
-    __strong OCBlock m_block;
-};
-
 
 @implementation LIThreadPool
 {
@@ -61,11 +41,5 @@ private:
 
 - (void)startWithThreads:(NSUInteger)count {
     _pool->start((int)count);
-}
-
-- (void)pushTask:(void (^)())task {
-    BlockTask *blockTask = new BlockTask(task);
-    std::shared_ptr<Task> p(blockTask);
-    _pool->push(p);
 }
 @end

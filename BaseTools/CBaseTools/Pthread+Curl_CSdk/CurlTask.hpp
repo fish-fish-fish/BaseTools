@@ -12,10 +12,12 @@
 #include <stdio.h>
 #include "curl.h"
 #include "CXXThreadPool.hpp"
+#include "TaskQueue.hpp"
 namespace CXXThread {
     
     class CurlTaskDelegate;
-    class CurlTask: public Task {
+    class QueueTask;
+    class CurlTask: public QueueTask {
     public:
         CurlTask(std::string url);
         CurlTask(std::string url, double rangeFrom);
@@ -28,7 +30,7 @@ namespace CXXThread {
         void cancel();
     
     protected:
-        void operator() () override;
+        void operator() () ;
         
     private:
         CURL *m_handle;

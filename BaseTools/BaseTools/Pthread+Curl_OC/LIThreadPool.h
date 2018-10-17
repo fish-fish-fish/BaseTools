@@ -11,10 +11,6 @@
 typedef void(^OCBlock)(void);
 @interface LIThreadPool : NSObject
 @property(class, nonatomic, readonly) LIThreadPool *shared;
-
-- (void)startWithThreads:(NSUInteger)count;
-
-- (void)pushTask:(OCBlock)task;
-
 - (instancetype)init NS_UNAVAILABLE;
+- (void)startWithThreads:(NSUInteger)count;
 @end
